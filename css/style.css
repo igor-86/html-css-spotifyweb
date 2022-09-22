@@ -7,16 +7,64 @@
 
 html {
     font-size: 100%;
+    font-family: 'Montserrat', sans-serif;
 }
 img {
     max-width: 100%;
+    display: block;
 }
 /* Custom Prop____ */
 :root {
-
+    /* Colors */
+    --col-1:#000000;
+    --col-2:#141922;
+    --col-3:#282828;
+    --col-4-t:#080b129a;
+    /* f-color */
+    --f-col:#080B12;
+    --f-col2:#D2D2D2;
+    --f-col3:#5A5A5A;
+    --f-col-w:white;
+    /* Space */
+    --s0_5:.5rem;
+    --s1_5:1.5rem;
+    --s1: 1em;
+    --s2: 2em;
+    --s3: 3em;
+    /* Font size */
+    --f0_2: 8px;
+    --f0_5: 12px;
+    --f1: 1rem;
+    --f1_1:1.5rem;
+    --f2: 2rem;
+    --f2_1: 2.5rem;
+    --f3: 3rem;
 }
 
 /* Utility class */
+/* Color */
+.c1 {
+    color: var(--f-col2);
+}
+.c2 {
+    color: var(--f-col3);
+}
+.f-xsmall {
+    font-size: var(--f0_2);
+}
+.f-small {
+    font-size: var(--f0_5);
+}
+.f-med {
+    font-size: var(--f1_1)
+} 
+/* Margin */
+.mr-xs {
+    margin-right: var(--s0_5) ;
+}
+.mr-s {
+    margin-right: var(--s1_5);
+}
 /* ___Tipography___ */
 
 /* TOP */
@@ -25,23 +73,22 @@ img {
 }
 .sx-toolbar {
     width: 200px;
-    background-color: black;
-    height: calc(100vh - 100px);
+    background-color: var(--col-1);
+    height: calc(100vh - 80px);
 }
 .main {
     width:calc(100vw - 200px);
-    height: calc(100vh - 100px);
+    height: calc(100vh - 80px);
     overflow-y: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Debug */
-    border: 1px solid yellow;
+    background-color: var(--col-2);
 }
 .main .menu-main {
     width: calc(100% - 200px);
     height: 100px;
-    background-color: #00000083;
+    background-color:var(--col-4-t);
     position: fixed;
     top: 0%;
     right: 0%;
@@ -52,7 +99,6 @@ img {
     margin-top: 110px;
     max-width: 1600px;
     width: 100%;
-    background-color: aqua;
     display: flex;
     gap: 1em;
     flex-wrap: wrap;
@@ -62,15 +108,165 @@ img {
 .row-main .col-main {
     
     width: calc(100%  / 6 - 1em );
-    /* debug */
-    background-color: blueviolet;
+   
 }  
 
 /* BOTTOM */
 
 .bottom {
     width: 100%;
-    height: 100px;
-    /* Debug */
-    background-color: brown;
+    height: 80px;
+    background-color: var(--col-3);
+    display: flex;
+    align-items: center;
+}
+
+/* Player */
+
+.player {
+    width: 100%;
+    height: 50px;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-between;
+}
+/* SX */
+.sx {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.sx .img-player {
+    width: 20%;
+}
+
+
+
+.box-player {
+    width: 30%;
+    height: 20px;
+    background-color: antiquewhite;
+    margin: 0 auto;
+} 
+/* MED */
+.med {
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    
+}
+/* Action Player */
+.med .action-player {
+    width: 200px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Time */
+.med .time {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.med i {
+    color: var(--f-col2);
+}
+.time .line-time {
+    width: 80%;
+    height: 3px;
+    background-color:var(--f-col3);
+    position: relative;
+    border-radius: 1px;
+    
+}
+.line-time::after {
+    content: '';
+    background-color:var(--f-col2);
+    width: 30%;
+    height: 3px;
+    position: absolute;
+    top:0;
+}
+
+.time .sec {
+    color:var(--f-col2);
+    font-size: var(--f0_5)
+}
+
+
+/* DX */
+
+.dx {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.dx i {
+    color: var(--f-col2);
+}
+.line {
+    width: 50%;
+    height: 3px;
+    background-color: var(--f-col3);
+    position: relative;
+    border-radius: 1px;
+    
+}
+.line::after {
+    content: '';
+    background-color:var(--f-col2);
+    
+    width: 30%;
+    height: 3px;
+    position: absolute;
+    top:0;
+}
+
+
+
+
+/* MEDIA QUERIE */
+
+/* Desktop S */
+@media screen and (max-width:1100px) {
+    .row-main .col-main {
+        width: calc(100%  / 4 - 1em );
+    } 
+}
+
+/* Tablet */
+
+@media screen and (max-width:700px) {
+    .row-main .col-main {
+        width: calc(100%  / 2 - 1em );
+    } 
+}
+
+/* Phone */
+
+@media screen and (max-width:600px) {
+    .sx-toolbar {
+        width: 50px;
+        background-color: black;
+        height: calc(100vh - 80px);
+    }
+    .main {
+        width:calc(100vw - 50px);
+        
+    }
+    .main .menu-main {
+        width: calc(100% - 50px);
+        
+    }
+    .title-player {
+        
+        transform: scale(0.9);
+    }
+   
 }
