@@ -111,10 +111,54 @@ ul {
 .top {
     display: flex;
 }
+/* Sx Toolbar */
 .sx-toolbar {
     width: 200px;
     background-color: var(--col-1);
     height: calc(100vh - 80px);
+    position: relative;
+    z-index: 20;
+}
+.sx-toolbar .logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+}
+.sx-toolbar .small-logo {
+    display: none;
+}
+.sx-toolbar .menu-toolbar {
+    width: 100%;
+    margin-top: 6.2em;
+    font-weight: 700;
+}
+.menu-toolbar .nav {
+    width: 100%;
+    
+    
+}
+.menu-toolbar .list {
+    margin-bottom: var(--s0_5);
+    border-left: 2px solid #acff2f00;
+    padding-left: 1.5em;
+}
+.list:first-child {
+    border-left: 2px solid #acff2f;
+}
+
+.nav .list img {
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.nav span {
+    vertical-align: middle;
+    line-height: 40px;
 }
 /* Main */
 .main {
@@ -154,7 +198,7 @@ ul {
     position: fixed;
     top: 0%;
     right: 0%;
-    z-index: 10;
+    z-index: 100;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -165,6 +209,7 @@ ul {
     padding:var(--s1) var(--s3);
     border-radius: 2em;
     margin-right: var(--s2);
+    
 }
 .menu-main > button:hover {
     transform: scale(1.1);
@@ -200,6 +245,8 @@ ul {
     background-color: var(--col-3);
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 50;
 }
 
 /* Player */
@@ -332,10 +379,21 @@ ul {
 /* Phone */
 
 @media screen and (max-width:600px) {
+    /* Sx Toolbar */
     .sx-toolbar {
         width: 50px;
         background-color: black;
         height: calc(100vh - 80px);
+    }
+    .sx-toolbar .logo {
+        transform: scale(1.2);
+    }
+    .sx-toolbar .big-logo {
+        display: none;
+        
+    }
+    .sx-toolbar .small-logo {
+        display: block;
     }
     .main {
         width:calc(100vw - 50px);
