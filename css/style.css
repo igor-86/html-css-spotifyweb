@@ -102,6 +102,20 @@ ul {
 .mt2 {
     margin-top: 1em;
 }
+.mt3 {
+    margin-top: 1.5em;
+}
+/* Padding */
+.pb {
+    padding-bottom:0.5rem;
+}
+/* Common */
+.bb {
+    border-bottom: 1px solid var(--f-col3);
+}
+.download {
+    filter: invert(50%);
+}
 
 /* ___Tipography___ */
 .tu {
@@ -134,19 +148,23 @@ ul {
 }
 .sx-toolbar .menu-toolbar {
     width: 100%;
+    height: calc(100% - 100px);
     margin-top: 6.2em;
     font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    
 }
 .menu-toolbar .nav {
     width: 100%;
-    
-    
 }
 .menu-toolbar .list {
     margin-bottom: var(--s0_5);
     border-left: 2px solid #acff2f00;
     padding-left: 1.5em;
+    
 }
+
 .list:first-child {
     border-left: 2px solid #acff2f;
 }
@@ -156,10 +174,53 @@ ul {
     display: inline-block;
     vertical-align: middle;
 }
+button.square {
+    background-color: var(--f-col2);
+    font-size: 24px;
+    width: 1.5em;
+    min-height: 1.5em;
+    border: 0px;
+}
+.list ul.menu {
+    color: var(--f-col3);
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.08rem;
+}
+
 .nav span {
     vertical-align: middle;
     line-height: 40px;
 }
+.menu-toolbar .list-rel {
+    margin-top: auto;
+}
+.list-rel .list img {
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+}
+/* HR */
+.list-rel hr {
+    width: 80%;
+    margin-left: 1.5em;
+}
+/* Flex profile specific */
+.list-rel .list .img-profile {
+    display: flex;
+    align-items: center;
+}
+.img-profile .cont-img {
+    background-color: var(--f-col3);
+    width: 2em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+
 /* Main */
 .main {
     width:calc(100vw - 200px);
@@ -385,6 +446,7 @@ ul {
         background-color: black;
         height: calc(100vh - 80px);
     }
+    
     .sx-toolbar .logo {
         transform: scale(1.2);
     }
@@ -395,6 +457,22 @@ ul {
     .sx-toolbar .small-logo {
         display: block;
     }
+    /* List */
+    .sx-toolbar .menu-toolbar {
+       
+        margin-top: 4.5em;
+        
+        
+    }
+    .menu-toolbar .list {
+        border-left: 0px solid #acff2f00;
+        text-align: center;
+        padding-left: 0em;
+        
+    }
+    .list-rel .list .img-profile {
+        justify-content: center;
+    }
     .main {
         width:calc(100vw - 50px);
         
@@ -404,8 +482,11 @@ ul {
         
     }
     .title-player {
-        
         transform: scale(0.9);
+    }
+    /* Common */
+    .d-none {
+        display: none;
     }
    
 }
