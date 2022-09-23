@@ -12,6 +12,7 @@ html {
 img {
     max-width: 100%;
     display: block;
+    
 }
 a {
     text-decoration: none;
@@ -49,6 +50,34 @@ ul {
 
     --f13: 0.8rem;
 }
+/*  Effects */
+ul li:hover a {
+    color: white;
+}
+ul li:hover {
+    color: white;
+}
+.h-effects {
+    background-color: rgba(0, 0, 0, 0.279);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    cursor: pointer;
+}
+.h-effects:hover {
+    opacity: 1;
+}
+.h-effects i {
+    color: white;
+    font-size: 6rem;
+}
+
 
 /* Utility class */
 /* Color */
@@ -293,6 +322,10 @@ button.square {
     text-align: center;
     width: calc(100%  / 6 - 1em );
 }  
+.cont-col {
+    position: relative;
+}
+
 .col-main .circle {
     border-radius: 50%;
     object-fit: cover;
@@ -335,7 +368,7 @@ button.square {
 .box-player {
     width: 30%;
     height: 20px;
-    background-color: antiquewhite;
+    
     margin: 0 auto;
 } 
 /* MED */
