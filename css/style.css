@@ -56,6 +56,7 @@ ul li:hover a {
 }
 ul li:hover {
     color: white;
+    cursor: pointer;
 }
 .h-effects {
     background-color: rgba(0, 0, 0, 0.279);
@@ -77,6 +78,42 @@ ul li:hover {
     color: white;
     font-size: 6rem;
 }
+.line-time .lin:hover>.cir {
+    background-color: #acff2f;
+    visibility: visible;
+}
+.line-time .lin:hover {
+    background-color: #acff2f;
+    cursor: pointer;
+}
+.fa-circle-play:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.und:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.fa-heart:hover, .fa-folder:hover {
+    color: var(--f-col2);
+    cursor: pointer;
+}
+.list a:hover img{
+    filter: invert(0);
+}
+.list a span:hover {
+    color: white;
+}
+.list button.square:hover {
+    background-color: white;
+}
+span.ho:hover {
+    color:white;
+    cursor: pointer;
+}
+
+
 
 
 /* Utility class */
@@ -145,6 +182,9 @@ ul li:hover {
 .download {
     filter: invert(50%);
 }
+.filt {
+    filter:invert(50%);
+}
 
 /* ___Tipography___ */
 .tu {
@@ -210,6 +250,7 @@ button.square {
     min-height: 1.5em;
     border: 0px;
 }
+
 .list ul.menu {
     color: var(--f-col3);
     font-weight: 700;
@@ -406,13 +447,24 @@ button.square {
     border-radius: 1px;
     
 }
-.line-time::after {
-    content: '';
+.line-time .lin {
     background-color:var(--f-col2);
     width: 30%;
     height: 3px;
     position: absolute;
     top:0;
+    left: 0;
+}
+.line-time .lin .cir {
+    background-color:var(--f-col2);
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: -3px;
+    right: 0;
+    border-radius: 50%;
+    z-index: 5;
+    visibility: hidden;
 }
 
 .time .sec {
@@ -460,6 +512,9 @@ button.square {
     .row-main .col-main {
         width: calc(100%  / 4 - 1em );
     } 
+    .h-effects i {
+        font-size: 5rem;
+    }
 }
 
 /* Tablet */
@@ -521,5 +576,8 @@ button.square {
     .d-none {
         display: none;
     }
-   
+    /* Hover effects */
+    .h-effects i {
+        font-size: 4rem;
+    }
 }
